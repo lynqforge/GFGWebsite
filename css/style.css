@@ -948,6 +948,10 @@ a:focus {
   background-color: #007fa4;
 }
 
+.privacy_policy_subtitle {
+  text-decoration: underline;
+}
+
 /* footer section*/
 .footer_section {
   position: relative;
