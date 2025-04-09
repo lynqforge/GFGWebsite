@@ -817,9 +817,26 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
+
+.policy_section {
+    color: #ffffff;
+    padding: 45px 0 15px 0;
+}
+
+.text-section {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    background: linear-gradient(150deg, #3a2e99, #1b0b77);
+}
+
+#header {
+    background: linear-gradient(150deg, #3a2e99, #1b0b77);
+}
+
 .info_section h4 {
-  font-weight: 600;
-  margin-bottom: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .info_section .info_col {
@@ -948,10 +965,6 @@ a:focus {
   background-color: #007fa4;
 }
 
-.privacy_policy_subtitle {
-  text-decoration: underline;
-}
-
 /* footer section*/
 .footer_section {
   position: relative;
@@ -968,3 +981,28 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+.contact_link_box a
+{
+    color:white;
+    background-color: #3a2e99;
+    padding:10px;
+    border-radius:4px;
+}
+
+.text-center a {
+    color: #00FF00;
+}
+
+
+    .contact_link_box a,
+    .contact_link_box a:hover,
+    .contact_link_box a:focus {
+        text-decoration: none;
+    }
+
+        .contact_link_box a:hover,
+        .contact_link_box a:focus {
+            color: #00FF00  !important;
+            
+        }
+
