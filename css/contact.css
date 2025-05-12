@@ -1,11 +1,22 @@
+.hr-color {
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+.gridguru-logo-small {
+    width: 170px;
+}
+
+.logo-div-padding {
+    padding-bottom: 15px;
+}
+
 .contact-section {
     width: 100%;
     max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
 }
-
-
 
 .contact-title {
     font-size: 1.875rem;

@@ -22,7 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!--owl slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
     <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -53,7 +54,8 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html#home">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="index.html#home">Home <span
+                                        class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html#about"> About</a>
@@ -146,31 +148,57 @@
     <section id="contactus" class="about_section layout_padding">
         <div class="container  ">
             <div class="heading_container heading_center">
+                <div class="container col-md-12 logo-div-padding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/logo-small.png" />
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/GridGuruWordLogoTPWhite-small.png" class="gridguru-logo-small" />
+                        </div>
+                    </div>
+                    <hr class="hr-color" />
+                </div>
+
                 <h2>
-                   Get In <span>Touch</span>
+                    Get In <span>Touch</span>
                 </h2>
                 <p>
                     Fill out the form below and we'll get back to you as soon as possible.
                 </p>
             </div>
-            <section class="contact-section">           
+            <section class="contact-section">
                 <form class="contact-form" id="contactForm">
                     <div class="form-group-container">
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                            <input id="name" name="name" class="form-input" placeholder="Your name" type="text"
+                                required />
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+                            <input id="email" name="email" class="form-input" placeholder="Your email" type="email"
+                                required />
                         </div>
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input id="phone" name="phone" class="form-input" placeholder="+27 (000) 00000" type="text" />
+                            <input id="phone" name="phone" class="form-input" placeholder="+1 000 000 0000"
+                                type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-input">
+                                <option value="" disabled>Please select</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Data Deletion Request">Data Deletion</option>
+                            </select>
+                            
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"
+                                required></textarea>
                         </div>
                     </div>
                     <button class="form-submit" type="submit">Send Message</button>
@@ -193,8 +221,9 @@
     <!-- jQery -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
     <!-- bootstrap js -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <!-- owl slider -->
@@ -213,12 +242,14 @@
                 var phone = $('#phone').val();
                 var message = $('#message').val();
 
+                var subject = $('#subject').find(':selected').val() ?? 'New Query';
+
                 // Encode the message content to ensure it works in the URL
-                var subject = encodeURIComponent("New Contact Form Submission from Web3Forms");
+                var subjectToUse = encodeURIComponent(subject);
                 var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nMessage: " + message);
 
                 // Construct the mailto link
-                var mailtoLink = "mailto: dev@gfgpower.us?subject=" + subject + "&body=" + body;
+                var mailtoLink = "mailto: dev@gfgpower.us?subject=" + subjectToUse + "&body=" + body;
 
                 // Use the mailto link to open the email client
                 window.location.href = mailtoLink;
